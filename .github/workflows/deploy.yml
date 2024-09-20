@@ -13,8 +13,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          submodules: false  # Don't fetch submodules
-          fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
