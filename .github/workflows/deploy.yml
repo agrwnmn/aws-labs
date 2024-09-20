@@ -13,12 +13,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
+          submodules: false  # Don't fetch submodules
           fetch-depth: 0  # Fetch all history for .GitInfo and .Lastmod
 
       - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Update to a more recent Node.js version
+          node-version: '18'
 
       - name: Install dependencies
         run: npm ci
